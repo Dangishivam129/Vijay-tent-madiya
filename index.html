@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vijay Tent Madiya</title>
+<meta name="description" content="Wedding, Birthday & Decoration services in Madiya, Tikamgarh. Vijay Tent House & Shivam DJ.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:Poppins;background:#0f0f0f;color:#fff}
+nav{display:flex;justify-content:center;gap:20px;background:#111;padding:10px;position:sticky;top:0}
+nav a{color:#fff;text-decoration:none}
+nav a:hover{color:#ff9800}
+
+.hero{
+  height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover
+}
+.btn{background:#ff9800;padding:10px 18px;border-radius:25px;color:#fff;text-decoration:none;margin:6px}
+
+.section{padding:50px 20px;text-align:center}
+.services{display:flex;flex-wrap:wrap;justify-content:center}
+.card{background:#1c1c1c;margin:10px;padding:20px;border-radius:12px;width:220px}
+
+.filter-buttons button{
+  padding:8px 12px;margin:5px;border:none;border-radius:20px;background:#ff9800;color:#fff;cursor:pointer
+}
+
+.gallery{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px
+}
+.gallery img{
+  width:100%;height:220px;object-fit:cover;border-radius:10px;cursor:pointer;transition:.2s
+}
+.gallery img:hover{transform:scale(1.04)}
+
+form{max-width:380px;margin:auto;background:#1c1c1c;padding:16px;border-radius:10px}
+input,textarea{width:100%;padding:10px;margin:8px 0}
+
+.sticky-bar{position:fixed;bottom:0;width:100%;display:flex}
+.sticky-bar a{flex:1;text-align:center;padding:14px;color:#fff;text-decoration:none}
+.sticky-bar a:first-child{background:#ff9800}
+.sticky-bar a:last-child{background:#25D366}
+
+.whatsapp{position:fixed;bottom:70px;right:18px;background:#25D366;padding:14px;border-radius:50%;color:#fff;text-decoration:none}
+footer{background:#111;text-align:center;padding:16px}
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  background:#111;
+}
+
+.logo img {
+  height:50px;
+}
+
+.menu a {
+  margin:0 10px;
+  color:white;
+  text-decoration:none;
+}
+
+.menu a:hover {
+  color:#ff9800;
+}
+</style> 
+
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="logo.png" alt="Vijay Tent Logo">
+  </div>
+
+  <div class="menu">
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#booking">Booking</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+<h1>Vijay Tent Madiya</h1>
+<p>Wedding | Birthday | Decoration</p>
+<a class="btn" href="tel:9893182464">📞 Call</a>
+<a class="btn" href="https://wa.me/918770318154">💬 WhatsApp</a>
+</section>
+
+<section class="section" id="services">
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">Wedding Decoration</div>
+<div class="card">Birthday Setup</div>
+<div class="card">Haldi Events</div>
+</div>
+</section>
+
+<section class="section" id="gallery">
+<h2>Our Work</h2>
+
+<div class="filter-buttons">
+<button onclick="filterGallery('all')">All</button>
+<button onclick="filterGallery('wedding')">Wedding</button>
+<button onclick="filterGallery('gate')">Gate</button>
+<button onclick="filterGallery('ground')">Ground</button>
+</div>
+
+<div class="gallery" id="gallery">
+  <!-- Put your images in /images folder -->
+  <img src="images/banner.jpg" data-cat="wedding">
+  <img src="images/gate1.jpg" data-cat="gate">
+  <img src="images/gate2.jpg" data-cat="gate">
+  <img src="images/gallery1.jpg" data-cat="wedding">
+  <img src="images/gallery2.jpg" data-cat="wedding">
+  <img src="images/gallery3.jpg" data-cat="wedding">
+  <img src="images/openground1.jpg" data-cat="ground">
+  <img src="images/openground2.jpg" data-cat="ground">
+  <img src="images/openground3.jpg" data-cat="ground">
+  <img src="images/openground4.jpg" data-cat="ground">
+</div>
+</section>
+
+<section class="section" id="booking">
+<h2>Book Your Event</h2>
+<form onsubmit="sendToWhatsApp();return false;">
+<input id="name" placeholder="Your Name" required>
+<input id="phone" placeholder="Phone Number" required>
+<textarea id="message" placeholder="Event Details"></textarea>
+<button class="btn">Send</button>
+</form>
+</section>
+
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<p>📍 Vijay Tent House & Shivam DJ, Madiya, Tikamgarh (MP)</p>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d319.18783259413703!2d78.7355259568558!3d25.162788203577477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39782bd6accf1071%3A0xf9342c21f215171e!2sVijay%20tent%20house%20and%20shivam%20dj!5e0!3m2!1sen!2sin!4v1773856963493!5m2!1sen!2sin"
+width="100%" height="300" style="border:0;border-radius:10px;"></iframe>
+</section>
+
+<footer>© 2026 Vijay Tent Madiya</footer>
+
+<a class="whatsapp" href="https://wa.me/918770318154">💬</a>
+
+<div class="sticky-bar">
+<a href="tel:9893182464">📞 Call</a>
+<a href="https://wa.me/918770318154">💬 WhatsApp</a>
+</div>
+
+<script>
+function filterGallery(cat){
+  const imgs = document.querySelectorAll('#gallery img');
+  imgs.forEach(img=>{
+    img.style.display = (cat==='all' || img.dataset.cat===cat) ? 'block' : 'none';
+  });
+}
+
+function sendToWhatsApp(){
+  const url = "https://wa.me/918770318154?text="
+    +"Name: "+name.value+"%0aPhone: "+phone.value+"%0aDetails: "+message.value;
+  window.open(url,'_blank');
+}
+</script>
+
+</body>
+</html>
