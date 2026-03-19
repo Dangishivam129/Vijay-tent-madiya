@@ -67,6 +67,26 @@ nav {
 
 .menu a:hover {
   color:#ff9800;
+}nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 20px;
+  background:#111;
+}
+
+.logo img {
+  height:50px;
+}
+
+.menu a {
+  margin:0 10px;
+  color:white;
+  text-decoration:none;
+}
+
+.menu a:hover {
+  color:#ff9800;
 }
 </style> 
 
@@ -114,7 +134,7 @@ nav {
 <button onclick="filterGallery('gate')">Gate</button>
 <button onclick="filterGallery('ground')">Ground</button>
 </div>
- <img src="logo.png" alt="Vijay Tent Logo">
+ 
 <div class="gallery" id="gallery">
   <!-- Put your images in /images folder -->
   <img src="banner.jpg" data-cat="wedding">
